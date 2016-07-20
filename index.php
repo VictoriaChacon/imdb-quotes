@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 	<html>
 	<head>
+		<link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
 		<title>Data Design</title>
 	</head>
 	<body>
 		<h1>Persona</h1>
+		<img class="profile-image" src="images/victoriavector.jpg"/>
 		<p><strong>Name</strong>:Victoria Point</p>
 		<br>
 		<p><strong>Age</strong>:24</p>
@@ -38,6 +40,14 @@
 		</ol>
 		<br>
 		<h1>Conceptual Model</h1>
+		<!--weak entities: quoteActor, actorMovie-->
+		<!--entities: quote, actor, movie-->
+		<ul>
+			<li><strong>many</strong> quotes can have <strong>many</strong>   actors</li>
+			<li><strong>many</strong> movies can have <strong>many</strong> actors</li>
+			<li><strong>one</strong> movie can have <strong>many</strong> quotes</li>
+		</ul>
+		<img src="images/imdb-quotes-ERD.svg"/>
 
 	</body>
 </html>
