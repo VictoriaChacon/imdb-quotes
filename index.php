@@ -20,9 +20,25 @@
 		<p><strong>Goals</strong>:It 11:00pm on a Friday night, Victoria is at work. Victoria finally has an hour to do some research before she continues working. She would like to find a couple of facts about the movie she is researching and also have some interesting points to bring up with her coworker. With only an hour Victoria would like to find at least two points to write about within 15 minutes so she can spend the majority of her time writing.
 		</p>
 		<br>
-		<p><strong>Use Case</strong> :Victoria has decided that she ants to work with a particular movie for her film project. She looks through her list of resources and wants quick information that does not require too many clicks. Right now she just needs tidbits of character information to expand upon.
+		<h1>Use Case</h1>
+		<br>
+		<p>Victoria has decided that she ants to work with a particular movie for her film project. She looks through her list of resources and wants quick information that does not require too many clicks. Right now she just needs tidbits of character information to expand upon.
 		Knowing which film she wants to work on Victoria goes to IMDB a site that she frequents for movie information.
-		Its 11:00pm on  a Friday night, Victoria is at work, but finally has an hour break in order to do some researching. She would like to find a couple of character quotes and expand on them and their actors as well as get some writing done. She only wants to spend maybe fifteen minutes researching and the rest of her time writing. </p>
+		Its 11:00pm on  a Friday night, Victoria is at work, but finally has an hour break in order to do some researching. She would like to find a couple of character quotes and expand on them and their actors as well as get some writing done. She only wants to spend maybe fifteen minutes researching and the rest of her time writing.</p>
+		<br>
+		<h1>Interaction Flow</h1>
+		<p><strong>User Story</strong>: I want to be able to find a quote from the movie im researching and find out information about that quote. Lke the character and the actor.</p>
+		<ol>
+			<li>user will access the imdb site</li>
+			<li>User will use the search bar to find their movie</li>
+			<li>user will scroll down and find the quotes section</li>
+			<li>user will click the "see more" link</li>
+			<li>user can scroll and find the quote</li>
+			<li>user can click on character name to be taken to the actors profile</li>
+		</ol>
+		<br>
+		<h1>Conceptual Model</h1>
+
 	</body>
 </html>
 
