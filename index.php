@@ -19,6 +19,7 @@
 		<br>
 		<p><strong>Goals</strong>:It 11:00pm on a Friday night, Victoria is at work. Victoria finally has an hour to do some research before she continues working. She would like to find a couple of facts about the movie she is researching and also have some interesting points to bring up with her coworker. With only an hour Victoria would like to find at least two points to write about within 15 minutes so she can spend the majority of her time writing.
 		</p>
+		<p>this is to commit and push for now</p>
 	</body>
 </html>
 
