@@ -1,8 +1,10 @@
-DROP TABLE IF EXISTS actor;
-DROP TABLE IF EXISTS movie;
-DROP TABLE IF EXISTS quote;
+-- name in reverse order of table
+-- alt/option up to reorder!
 DROP TABLE IF EXISTS quoteActor;
+DROP TABLE IF EXISTS quote;
 DROP TABLE IF EXISTS actorMovie;
+DROP TABLE IF EXISTS movie;
+DROP TABLE IF EXISTS actor;
 
 -- Creating tables for my entities here
 -- Create actor entity; actorId is the primary key
@@ -12,8 +14,19 @@ CREATE TABLE actor (
 	PRIMARY KEY(actorId)
 
 );
+
+-- Create movie entity; movieId is the primary key
+CREATE TABLE movie (
+	-- movieId is the primary key
+	movieId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	movieTitle VARCHAR (128) NOT NULL,
+	PRIMARY KEY(movieId)
+
+);
 -- Creating weak entity actorMovie here
 -- Many quotes can have many actors
+-- place weak entities by most autotrophic to least autotrophic?
+-- Because actorMovie needs to utilized both actor and movie
 CREATE TABLE actorMovie (
 	actorMovieActorId INT UNSIGNED NOT NULL,
 	actorMovieMovieId INT UNSIGNED NOT NULL,
@@ -24,15 +37,6 @@ CREATE TABLE actorMovie (
 	FOREIGN KEY(actorMovieActorId) REFERENCES actor(actorId),
 	FOREIGN KEY (actorMovieMovieId) REFERENCES movie(movieId),
 	PRIMARY KEY (actorMovieActorId, actorMovieMovieId)
-);
-
--- Create movie entity; movieId is the primary key
-CREATE TABLE movie (
-	-- movieId is the primary key
-	movieId INT UNSIGNED AUTO_INCREMENT NOT NULL,
-	movieTitle VARCHAR (128) NOT NULL,
-	PRIMARY KEY(movieId)
-
 );
 -- Create quote entity; quoteId is the primary key here
 CREATE TABLE quote (
