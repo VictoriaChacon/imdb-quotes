@@ -6,7 +6,6 @@
  *
  * @author Victoria Chacon <vchacon8@cnm.edu>
  **/
-
 class Actor {
 	/**
 	 * id for actor; this is the primary key
@@ -30,7 +29,6 @@ class Actor {
 	/**
 	 * mutator method for actor Id
 	 * @param int|null $newActorId new value of actor Id
-	 * @throws UnexpectedValueException if $newActorId is not an integer
 	 * @throws \RangeException if $newActorId is not positive
 	 * @throws \TypeError if $newActorId is not an integer
 	 **/
@@ -60,7 +58,6 @@ class Actor {
 	 *
 	 * @param string $newActorName new value of actor name
 	 * @throws \InvalidArgumentException if $newActorName is not a string or insecure
-	 * @throws \RangeException if $newActorName is > 100 characters
 	 * @throws \TypeError if $newActorName is not a string
 	 **/
 	public function setActorName(string $newActorName) {
@@ -68,11 +65,11 @@ class Actor {
 		$newActorName = trim($newActorName);
 		$newActorName = filter_var($newActorName, FILTER_SANITIZE_STRING);
 		if(empty($newActorName) === true) {
-			throw(new RangeException("actor name is missing or insecure"));
+			throw(new InvalidArgumentException("actor name is not a string"));
 		}
 		//are these range exceptions necessary...i can see maybe if it is is less than or equal to zero, but this is different than tweet content...wuld I even need this? How about validating a string?
 		if(strlen($newActorName) > 100) {
-			throw(new \RangeException("actor name is too long"));
+			throw(new \TypeError("actor name is not a string"));
 		}
 		//storing the actor name
 		$this->actorName = $newActorName;
