@@ -66,10 +66,10 @@ class Actor {
 		$newActorName = trim($newActorName);
 		$newActorName = filter_var($newActorName, FILTER_SANITIZE_STRING);
 		if(empty($newActorName) === true) {
-			throw(new InvalidArgumentException("actor name is not a string"));
+			throw(new \InvalidArgumentException("actor name is not a string"));
+		}
 		if(strlen($newActorName) > 100) {
 			throw(new \RangeException("Actor name is too long"));
-		}
 		}
 		//storing the actor name
 		$this->actorName = $newActorName;
