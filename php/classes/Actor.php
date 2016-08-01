@@ -16,6 +16,21 @@ class Actor {
 	 */
 	private $actorName;
 
+	/** constructor for this Actor
+	 *
+	 * @param $newActorId
+	 * @param string $newActorName new actor name
+	 * @internal param $int $$newActorId new actor id
+	 */
+	public function __construct($newActorId, $newActorName) {
+		try {
+			$this->setActorId($newActorId);
+			$this->setActorName($newActorName);
+		} catch(RangeException $exception) {
+			throw(new RangeException ("Unable to construct Actor", 0, $exception));
+		}
+	}
+
 	/**
 	 * accessor method for actor Id
 	 *
@@ -74,8 +89,18 @@ class Actor {
 		//storing the actor name
 		$this->actorName = $newActorName;
 	}
+	/**
+	 * toString () magic method
+	 *
+	 *@return string HTML formatted profile
+	 **/
+	public function __toString() {
+		$html = "<p>Actor id: " . $this-> actorId
+			     ."Actor name:" . $this-> actorName
+				  ."</p>";
+		return($html);
 }
-
+}
 
 
 
